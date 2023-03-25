@@ -17,7 +17,7 @@ const chatWidgetMessages = document.getElementById('chat-widget__messages');
 const chatWidgetInput = document.getElementById('chat-widget__input')
 
 chatWidgetInput.addEventListener('keydown', (event) => {
-  if(event.key === 'Enter') {
+    if (event.key === "Enter" && chatWidgetInput.value.trim().length > 0) {
     chatWidgetMessages.innerHTML += `
     <div class="message message_client">
       <div class="message__time">`+ new Date().toLocaleTimeString("ru", {hour: "2-digit", minute: "2-digit"}) +`</div>
